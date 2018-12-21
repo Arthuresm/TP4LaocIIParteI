@@ -1,0 +1,63 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vBloco
+Z1 IK^@]FE[ib0bP?_9Z7BA=U1
+Z2 V1l?;f>7aMALaURYheOZ_>1
+Z3 dD:\Engenharia de Computação Quarto Período\Laboratório de Arquitetura e Organização de Computadores II\TP4\mesi-cache-coherence\Top Level\src
+Z4 w1542970691
+Z5 8D:/Engenharia de Computação Quarto Período/Laboratório de Arquitetura e Organização de Computadores II/TP4/mesi-cache-coherence/Top Level/src/Bloco.v
+Z6 FD:/Engenharia de Computação Quarto Período/Laboratório de Arquitetura e Organização de Computadores II/TP4/mesi-cache-coherence/Top Level/src/Bloco.v
+L0 1
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@bloco
+Z10 !s100 ff8i8C`jTam=k@e_VkkTB2
+Z11 !s108 1542974397.446000
+Z12 !s107 D:/Engenharia de Computação Quarto Período/Laboratório de Arquitetura e Organização de Computadores II/TP4/mesi-cache-coherence/Top Level/src/Bloco.v|
+Z13 !s90 -reportprogress|300|-work|work|D:/Engenharia de Computação Quarto Período/Laboratório de Arquitetura e Organização de Computadores II/TP4/mesi-cache-coherence/Top Level/src/Bloco.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vemissor
+Z14 IoBBK9LHPiE<ASVZKR`OnS2
+Z15 Vck[8c>J?fQm79YJecoK7o0
+R3
+R4
+Z16 8D:/Engenharia de Computação Quarto Período/Laboratório de Arquitetura e Organização de Computadores II/TP4/mesi-cache-coherence/Top Level/src/emissor.v
+Z17 FD:/Engenharia de Computação Quarto Período/Laboratório de Arquitetura e Organização de Computadores II/TP4/mesi-cache-coherence/Top Level/src/emissor.v
+L0 1
+R7
+r1
+31
+R8
+!i10b 1
+Z18 !s100 DFn[ZWf?`@a8QjQ^TVgz@0
+!s85 0
+Z19 !s108 1542974397.675000
+Z20 !s107 D:/Engenharia de Computação Quarto Período/Laboratório de Arquitetura e Organização de Computadores II/TP4/mesi-cache-coherence/Top Level/src/emissor.v|
+Z21 !s90 -reportprogress|300|-work|work|D:/Engenharia de Computação Quarto Período/Laboratório de Arquitetura e Organização de Computadores II/TP4/mesi-cache-coherence/Top Level/src/emissor.v|
+!s101 -O0
+vouvinte
+!i10b 1
+!s100 BT_4KbnIedOXzJ3=A=W<O3
+I=742UVz:==R3a7gKj@CcJ2
+VSam6BP^D<FE>PGBOB^zkm1
+R3
+R4
+8D:/Engenharia de Computação Quarto Período/Laboratório de Arquitetura e Organização de Computadores II/TP4/mesi-cache-coherence/Top Level/src/ouvinte.v
+FD:/Engenharia de Computação Quarto Período/Laboratório de Arquitetura e Organização de Computadores II/TP4/mesi-cache-coherence/Top Level/src/ouvinte.v
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1542974397.811000
+!s107 D:/Engenharia de Computação Quarto Período/Laboratório de Arquitetura e Organização de Computadores II/TP4/mesi-cache-coherence/Top Level/src/ouvinte.v|
+!s90 -reportprogress|300|-work|work|D:/Engenharia de Computação Quarto Período/Laboratório de Arquitetura e Organização de Computadores II/TP4/mesi-cache-coherence/Top Level/src/ouvinte.v|
+!s101 -O0
+R8

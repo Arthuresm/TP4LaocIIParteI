@@ -1,0 +1,859 @@
+TimeQuest Timing Analyzer report for MaquinaEstados
+Fri Nov 23 13:36:59 2018
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'KEY[0]'
+ 12. Slow Model Hold: 'KEY[0]'
+ 13. Slow Model Minimum Pulse Width: 'KEY[0]'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Fast Model Setup Summary
+ 21. Fast Model Hold Summary
+ 22. Fast Model Recovery Summary
+ 23. Fast Model Removal Summary
+ 24. Fast Model Minimum Pulse Width Summary
+ 25. Fast Model Setup: 'KEY[0]'
+ 26. Fast Model Hold: 'KEY[0]'
+ 27. Fast Model Minimum Pulse Width: 'KEY[0]'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Propagation Delay
+ 33. Minimum Propagation Delay
+ 34. Multicorner Timing Analysis Summary
+ 35. Setup Times
+ 36. Hold Times
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Progagation Delay
+ 40. Minimum Progagation Delay
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; MaquinaEstados                                                    ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; KEY[0]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { KEY[0] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 174.7 MHz ; 174.7 MHz       ; KEY[0]     ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; KEY[0] ; -4.724 ; -45.720       ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; KEY[0] ; 2.144 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; KEY[0] ; -1.222 ; -12.222              ;
++--------+--------+----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'KEY[0]'                                                                                                                           ;
++--------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; -4.724 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[2]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.029     ; 5.617      ;
+; -4.713 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[1]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.020     ; 5.615      ;
+; -4.553 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[2]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.029     ; 5.446      ;
+; -4.542 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[1]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.020     ; 5.444      ;
+; -4.541 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[1]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 5.577      ;
+; -4.535 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[2]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 5.571      ;
+; -4.412 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[2]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.029     ; 5.305      ;
+; -4.401 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[1]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.020     ; 5.303      ;
+; -4.370 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[1]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 5.406      ;
+; -4.364 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[2]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 5.400      ;
+; -4.229 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[1]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 5.265      ;
+; -4.223 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[2]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 5.259      ;
+; -4.105 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[0]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.020     ; 5.007      ;
+; -4.001 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[0]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.020     ; 4.903      ;
+; -3.964 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[0]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.020     ; 4.866      ;
+; -3.949 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[0]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 4.985      ;
+; -3.880 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[2]                ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 4.802      ;
+; -3.879 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[3]                ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 4.801      ;
+; -3.845 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[0]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 4.881      ;
+; -3.808 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[0]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.001     ; 4.729      ;
+; -3.808 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[4]                ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.007      ; 4.737      ;
+; -3.808 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[0]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 4.844      ;
+; -3.778 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[1]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.001     ; 4.699      ;
+; -3.776 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[2]                ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 4.698      ;
+; -3.775 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[3]                ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 4.697      ;
+; -3.739 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[2]                ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 4.661      ;
+; -3.738 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[3]                ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 4.660      ;
+; -3.704 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[0]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.001     ; 4.625      ;
+; -3.704 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[4]                ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.007      ; 4.633      ;
+; -3.674 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[1]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.001     ; 4.595      ;
+; -3.667 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[0]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.001     ; 4.588      ;
+; -3.667 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[4]                ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.007      ; 4.596      ;
+; -3.637 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[1]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.001     ; 4.558      ;
++--------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'KEY[0]'                                                                                                                           ;
++-------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; 2.144 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[1]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.410      ;
+; 2.332 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[2]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.598      ;
+; 2.365 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[1]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.020     ; 2.448      ;
+; 2.570 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[2]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.029     ; 2.644      ;
+; 2.583 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[2]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.849      ;
+; 2.628 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[1]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.894      ;
+; 2.724 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[2]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.990      ;
+; 2.821 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[2]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.029     ; 2.895      ;
+; 2.849 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[1]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.020     ; 2.932      ;
+; 2.890 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[0]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 3.156      ;
+; 2.935 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[0]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 3.201      ;
+; 2.962 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[2]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.029     ; 3.036      ;
+; 3.001 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[1]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 3.267      ;
+; 3.095 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[0]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.020     ; 3.178      ;
+; 3.106 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[1]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.001     ; 3.208      ;
+; 3.140 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[0]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.020     ; 3.223      ;
+; 3.143 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[0]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 3.409      ;
+; 3.185 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[3]                ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 3.288      ;
+; 3.188 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[2]                ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 3.291      ;
+; 3.222 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[1]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.020     ; 3.305      ;
+; 3.312 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[0]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.001     ; 3.414      ;
+; 3.321 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[4]                ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.007      ; 3.431      ;
+; 3.340 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[4]                ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.007      ; 3.450      ;
+; 3.344 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[0]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.001     ; 3.446      ;
+; 3.348 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[0]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.020     ; 3.431      ;
+; 3.431 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[1]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.001     ; 3.533      ;
+; 3.458 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[3]                ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 3.561      ;
+; 3.459 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[2]                ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 3.562      ;
+; 3.465 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[4]                ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.007      ; 3.575      ;
+; 3.500 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[0]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.001     ; 3.602      ;
+; 3.681 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[1]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.001     ; 3.783      ;
+; 3.811 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[3]                ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 3.914      ;
+; 3.849 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[2]                ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 3.952      ;
++-------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'KEY[0]'                                                                            ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                            ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; KEY[0] ; Rise       ; KEY[0]                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|BUS[0]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|BUS[0]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|BUS[1]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|BUS[1]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|BUS[2]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|BUS[2]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|BUS[3]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|BUS[3]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|BUS[4]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|BUS[4]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|state[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|state[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|state[0]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|state[0]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|state[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|state[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|state[1]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|state[1]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|state[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|state[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|state[2]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|state[2]~_Duplicate_1 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; KEY[0]|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; KEY[0]|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDG[2]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDG[2]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDG[3]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDG[3]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDG[4]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDG[4]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDG[5]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDG[5]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDG[6]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDG[6]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDR[0]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDR[0]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDR[1]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDR[1]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDR[2]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDR[2]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; teste|state[0]~_Duplicate_1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; teste|state[0]~_Duplicate_1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; teste|state[1]~_Duplicate_1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; teste|state[1]~_Duplicate_1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; teste|state[2]~_Duplicate_1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; teste|state[2]~_Duplicate_1|clk   ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 5.637 ; 5.637 ; Fall       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 4.016 ; 4.016 ; Fall       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 4.988 ; 4.988 ; Fall       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 5.364 ; 5.364 ; Fall       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; 5.367 ; 5.367 ; Fall       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 5.637 ; 5.637 ; Fall       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 5.554 ; 5.554 ; Fall       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 0.145  ; 0.145  ; Fall       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; -0.103 ; -0.103 ; Fall       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; -0.990 ; -0.990 ; Fall       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.145  ; 0.145  ; Fall       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; -1.182 ; -1.182 ; Fall       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; -1.163 ; -1.163 ; Fall       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; -0.540 ; -0.540 ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; LEDG[*]   ; KEY[0]     ; 10.267 ; 10.267 ; Rise       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 10.267 ; 10.267 ; Rise       ; KEY[0]          ;
+; LEDG[*]   ; KEY[0]     ; 10.267 ; 10.267 ; Fall       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 10.267 ; 10.267 ; Fall       ; KEY[0]          ;
+;  LEDG[2]  ; KEY[0]     ; 7.115  ; 7.115  ; Fall       ; KEY[0]          ;
+;  LEDG[3]  ; KEY[0]     ; 7.115  ; 7.115  ; Fall       ; KEY[0]          ;
+;  LEDG[4]  ; KEY[0]     ; 7.156  ; 7.156  ; Fall       ; KEY[0]          ;
+;  LEDG[5]  ; KEY[0]     ; 7.146  ; 7.146  ; Fall       ; KEY[0]          ;
+;  LEDG[6]  ; KEY[0]     ; 7.143  ; 7.143  ; Fall       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 7.126  ; 7.126  ; Fall       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 7.126  ; 7.126  ; Fall       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 7.126  ; 7.126  ; Fall       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 7.087  ; 7.087  ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; LEDG[*]   ; KEY[0]     ; 10.267 ; 10.267 ; Rise       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 10.267 ; 10.267 ; Rise       ; KEY[0]          ;
+; LEDG[*]   ; KEY[0]     ; 7.115  ; 7.115  ; Fall       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 10.267 ; 10.267 ; Fall       ; KEY[0]          ;
+;  LEDG[2]  ; KEY[0]     ; 7.115  ; 7.115  ; Fall       ; KEY[0]          ;
+;  LEDG[3]  ; KEY[0]     ; 7.115  ; 7.115  ; Fall       ; KEY[0]          ;
+;  LEDG[4]  ; KEY[0]     ; 7.156  ; 7.156  ; Fall       ; KEY[0]          ;
+;  LEDG[5]  ; KEY[0]     ; 7.146  ; 7.146  ; Fall       ; KEY[0]          ;
+;  LEDG[6]  ; KEY[0]     ; 7.143  ; 7.143  ; Fall       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 7.087  ; 7.087  ; Fall       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 7.126  ; 7.126  ; Fall       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 7.126  ; 7.126  ; Fall       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 7.087  ; 7.087  ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+----+-------+-------+----+
+; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
++------------+-------------+----+-------+-------+----+
+; KEY[1]     ; LEDG[1]     ;    ; 9.670 ; 9.670 ;    ;
++------------+-------------+----+-------+-------+----+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+----+-------+-------+----+
+; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
++------------+-------------+----+-------+-------+----+
+; KEY[1]     ; LEDG[1]     ;    ; 9.670 ; 9.670 ;    ;
++------------+-------------+----+-------+-------+----+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; KEY[0] ; -1.633 ; -15.075       ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; KEY[0] ; 0.967 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; KEY[0] ; -1.222 ; -12.222              ;
++--------+--------+----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'KEY[0]'                                                                                                                           ;
++--------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.633 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[2]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.076     ; 2.519      ;
+; -1.596 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[1]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.067     ; 2.491      ;
+; -1.554 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[2]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.076     ; 2.440      ;
+; -1.517 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[1]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.067     ; 2.412      ;
+; -1.502 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[2]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.076     ; 2.388      ;
+; -1.465 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[1]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.067     ; 2.360      ;
+; -1.444 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[2]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.476      ;
+; -1.421 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[1]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.453      ;
+; -1.382 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[0]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.067     ; 2.277      ;
+; -1.365 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[2]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.397      ;
+; -1.342 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[1]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.374      ;
+; -1.329 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[2]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.055     ; 2.236      ;
+; -1.316 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[0]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.067     ; 2.211      ;
+; -1.313 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[2]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.345      ;
+; -1.299 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[0]              ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.067     ; 2.194      ;
+; -1.298 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[3]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.055     ; 2.205      ;
+; -1.290 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[1]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.322      ;
+; -1.264 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[0]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.058     ; 2.168      ;
+; -1.263 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[2]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.055     ; 2.170      ;
+; -1.249 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[4]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.046     ; 2.165      ;
+; -1.246 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[2]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.055     ; 2.153      ;
+; -1.241 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[1]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.058     ; 2.145      ;
+; -1.232 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[3]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.055     ; 2.139      ;
+; -1.218 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[0]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.250      ;
+; -1.215 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[3]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.055     ; 2.122      ;
+; -1.198 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[0]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.058     ; 2.102      ;
+; -1.183 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[4]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.046     ; 2.099      ;
+; -1.181 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[0]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.058     ; 2.085      ;
+; -1.175 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[1]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.058     ; 2.079      ;
+; -1.166 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[4]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.046     ; 2.082      ;
+; -1.158 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[1]                ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.058     ; 2.062      ;
+; -1.152 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[0]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.184      ;
+; -1.135 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[0]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.167      ;
++--------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'KEY[0]'                                                                                                                           ;
++-------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.967 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[1]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.119      ;
+; 1.067 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[2]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.219      ;
+; 1.146 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[2]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.298      ;
+; 1.161 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[1]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.067     ; 1.157      ;
+; 1.178 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[1]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.330      ;
+; 1.229 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[2]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.381      ;
+; 1.275 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[2]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.076     ; 1.262      ;
+; 1.283 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[0]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.435      ;
+; 1.311 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[0]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.463      ;
+; 1.332 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[1]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.484      ;
+; 1.354 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[2]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.076     ; 1.341      ;
+; 1.372 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[1]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.067     ; 1.368      ;
+; 1.392 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[0]~_Duplicate_1 ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.544      ;
+; 1.437 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[2]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.076     ; 1.424      ;
+; 1.466 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[0]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.067     ; 1.462      ;
+; 1.469 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[1]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.058     ; 1.474      ;
+; 1.494 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|state[0]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.067     ; 1.490      ;
+; 1.526 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|state[1]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.067     ; 1.522      ;
+; 1.533 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[3]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.055     ; 1.541      ;
+; 1.537 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[2]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.055     ; 1.545      ;
+; 1.564 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[0]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.058     ; 1.569      ;
+; 1.573 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[4]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.046     ; 1.590      ;
+; 1.575 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|state[0]              ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.067     ; 1.571      ;
+; 1.575 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[4]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.046     ; 1.592      ;
+; 1.585 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[0]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.058     ; 1.590      ;
+; 1.630 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[1]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.058     ; 1.635      ;
+; 1.637 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[3]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.055     ; 1.645      ;
+; 1.639 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[4]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.046     ; 1.656      ;
+; 1.650 ; Bloco:teste|state[2]~_Duplicate_1 ; Bloco:teste|BUS[0]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.058     ; 1.655      ;
+; 1.668 ; Bloco:teste|state[1]~_Duplicate_1 ; Bloco:teste|BUS[2]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.055     ; 1.676      ;
+; 1.734 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[1]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.058     ; 1.739      ;
+; 1.826 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[3]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.055     ; 1.834      ;
+; 1.830 ; Bloco:teste|state[0]~_Duplicate_1 ; Bloco:teste|BUS[2]                ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.055     ; 1.838      ;
++-------+-----------------------------------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'KEY[0]'                                                                            ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                            ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; KEY[0] ; Rise       ; KEY[0]                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|BUS[0]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|BUS[0]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|BUS[1]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|BUS[1]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|BUS[2]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|BUS[2]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|BUS[3]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|BUS[3]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|BUS[4]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|BUS[4]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|state[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|state[0]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|state[0]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|state[0]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|state[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|state[1]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|state[1]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|state[1]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|state[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|state[2]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Fall       ; Bloco:teste|state[2]~_Duplicate_1 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Fall       ; Bloco:teste|state[2]~_Duplicate_1 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; KEY[0]|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; KEY[0]|combout                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDG[2]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDG[2]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDG[3]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDG[3]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDG[4]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDG[4]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDG[5]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDG[5]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDG[6]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDG[6]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDR[0]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDR[0]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDR[1]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDR[1]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; LEDR[2]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; LEDR[2]|outclk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; teste|state[0]~_Duplicate_1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; teste|state[0]~_Duplicate_1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; teste|state[1]~_Duplicate_1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; teste|state[1]~_Duplicate_1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; teste|state[2]~_Duplicate_1|clk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; teste|state[2]~_Duplicate_1|clk   ;
++--------+--------------+----------------+------------------+--------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 2.389 ; 2.389 ; Fall       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 1.695 ; 1.695 ; Fall       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 2.137 ; 2.137 ; Fall       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 2.282 ; 2.282 ; Fall       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; 2.288 ; 2.288 ; Fall       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 2.389 ; 2.389 ; Fall       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 2.362 ; 2.362 ; Fall       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 0.209  ; 0.209  ; Fall       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.119  ; 0.119  ; Fall       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; -0.286 ; -0.286 ; Fall       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.209  ; 0.209  ; Fall       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; -0.393 ; -0.393 ; Fall       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; -0.343 ; -0.343 ; Fall       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; -0.057 ; -0.057 ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[0]     ; 5.932 ; 5.932 ; Rise       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 5.932 ; 5.932 ; Rise       ; KEY[0]          ;
+; LEDG[*]   ; KEY[0]     ; 5.932 ; 5.932 ; Fall       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 5.932 ; 5.932 ; Fall       ; KEY[0]          ;
+;  LEDG[2]  ; KEY[0]     ; 3.828 ; 3.828 ; Fall       ; KEY[0]          ;
+;  LEDG[3]  ; KEY[0]     ; 3.828 ; 3.828 ; Fall       ; KEY[0]          ;
+;  LEDG[4]  ; KEY[0]     ; 3.871 ; 3.871 ; Fall       ; KEY[0]          ;
+;  LEDG[5]  ; KEY[0]     ; 3.861 ; 3.861 ; Fall       ; KEY[0]          ;
+;  LEDG[6]  ; KEY[0]     ; 3.860 ; 3.860 ; Fall       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 3.849 ; 3.849 ; Fall       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 3.849 ; 3.849 ; Fall       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 3.849 ; 3.849 ; Fall       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 3.810 ; 3.810 ; Fall       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[0]     ; 5.932 ; 5.932 ; Rise       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 5.932 ; 5.932 ; Rise       ; KEY[0]          ;
+; LEDG[*]   ; KEY[0]     ; 3.828 ; 3.828 ; Fall       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 5.932 ; 5.932 ; Fall       ; KEY[0]          ;
+;  LEDG[2]  ; KEY[0]     ; 3.828 ; 3.828 ; Fall       ; KEY[0]          ;
+;  LEDG[3]  ; KEY[0]     ; 3.828 ; 3.828 ; Fall       ; KEY[0]          ;
+;  LEDG[4]  ; KEY[0]     ; 3.871 ; 3.871 ; Fall       ; KEY[0]          ;
+;  LEDG[5]  ; KEY[0]     ; 3.861 ; 3.861 ; Fall       ; KEY[0]          ;
+;  LEDG[6]  ; KEY[0]     ; 3.860 ; 3.860 ; Fall       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 3.810 ; 3.810 ; Fall       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 3.849 ; 3.849 ; Fall       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 3.849 ; 3.849 ; Fall       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 3.810 ; 3.810 ; Fall       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Propagation Delay                                  ;
++------------+-------------+----+-------+-------+----+
+; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
++------------+-------------+----+-------+-------+----+
+; KEY[1]     ; LEDG[1]     ;    ; 5.642 ; 5.642 ;    ;
++------------+-------------+----+-------+-------+----+
+
+
++----------------------------------------------------+
+; Minimum Propagation Delay                          ;
++------------+-------------+----+-------+-------+----+
+; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
++------------+-------------+----+-------+-------+----+
+; KEY[1]     ; LEDG[1]     ;    ; 5.642 ; 5.642 ;    ;
++------------+-------------+----+-------+-------+----+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -4.724  ; 0.967 ; N/A      ; N/A     ; -1.222              ;
+;  KEY[0]          ; -4.724  ; 0.967 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -45.72  ; 0.0   ; 0.0      ; 0.0     ; -12.222             ;
+;  KEY[0]          ; -45.720 ; 0.000 ; N/A      ; N/A     ; -12.222             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 5.637 ; 5.637 ; Fall       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 4.016 ; 4.016 ; Fall       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 4.988 ; 4.988 ; Fall       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 5.364 ; 5.364 ; Fall       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; 5.367 ; 5.367 ; Fall       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; 5.637 ; 5.637 ; Fall       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; 5.554 ; 5.554 ; Fall       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 0.209  ; 0.209  ; Fall       ; KEY[0]          ;
+;  SW[0]    ; KEY[0]     ; 0.119  ; 0.119  ; Fall       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; -0.286 ; -0.286 ; Fall       ; KEY[0]          ;
+;  SW[2]    ; KEY[0]     ; 0.209  ; 0.209  ; Fall       ; KEY[0]          ;
+;  SW[3]    ; KEY[0]     ; -0.393 ; -0.393 ; Fall       ; KEY[0]          ;
+;  SW[4]    ; KEY[0]     ; -0.343 ; -0.343 ; Fall       ; KEY[0]          ;
+;  SW[5]    ; KEY[0]     ; -0.057 ; -0.057 ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; LEDG[*]   ; KEY[0]     ; 10.267 ; 10.267 ; Rise       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 10.267 ; 10.267 ; Rise       ; KEY[0]          ;
+; LEDG[*]   ; KEY[0]     ; 10.267 ; 10.267 ; Fall       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 10.267 ; 10.267 ; Fall       ; KEY[0]          ;
+;  LEDG[2]  ; KEY[0]     ; 7.115  ; 7.115  ; Fall       ; KEY[0]          ;
+;  LEDG[3]  ; KEY[0]     ; 7.115  ; 7.115  ; Fall       ; KEY[0]          ;
+;  LEDG[4]  ; KEY[0]     ; 7.156  ; 7.156  ; Fall       ; KEY[0]          ;
+;  LEDG[5]  ; KEY[0]     ; 7.146  ; 7.146  ; Fall       ; KEY[0]          ;
+;  LEDG[6]  ; KEY[0]     ; 7.143  ; 7.143  ; Fall       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 7.126  ; 7.126  ; Fall       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 7.126  ; 7.126  ; Fall       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 7.126  ; 7.126  ; Fall       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 7.087  ; 7.087  ; Fall       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; LEDG[*]   ; KEY[0]     ; 5.932 ; 5.932 ; Rise       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 5.932 ; 5.932 ; Rise       ; KEY[0]          ;
+; LEDG[*]   ; KEY[0]     ; 3.828 ; 3.828 ; Fall       ; KEY[0]          ;
+;  LEDG[0]  ; KEY[0]     ; 5.932 ; 5.932 ; Fall       ; KEY[0]          ;
+;  LEDG[2]  ; KEY[0]     ; 3.828 ; 3.828 ; Fall       ; KEY[0]          ;
+;  LEDG[3]  ; KEY[0]     ; 3.828 ; 3.828 ; Fall       ; KEY[0]          ;
+;  LEDG[4]  ; KEY[0]     ; 3.871 ; 3.871 ; Fall       ; KEY[0]          ;
+;  LEDG[5]  ; KEY[0]     ; 3.861 ; 3.861 ; Fall       ; KEY[0]          ;
+;  LEDG[6]  ; KEY[0]     ; 3.860 ; 3.860 ; Fall       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 3.810 ; 3.810 ; Fall       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 3.849 ; 3.849 ; Fall       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 3.849 ; 3.849 ; Fall       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 3.810 ; 3.810 ; Fall       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------+
+; Progagation Delay                                  ;
++------------+-------------+----+-------+-------+----+
+; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
++------------+-------------+----+-------+-------+----+
+; KEY[1]     ; LEDG[1]     ;    ; 9.670 ; 9.670 ;    ;
++------------+-------------+----+-------+-------+----+
+
+
++----------------------------------------------------+
+; Minimum Progagation Delay                          ;
++------------+-------------+----+-------+-------+----+
+; Input Port ; Output Port ; RR ; RF    ; FR    ; FF ;
++------------+-------------+----+-------+-------+----+
+; KEY[1]     ; LEDG[1]     ;    ; 5.642 ; 5.642 ;    ;
++------------+-------------+----+-------+-------+----+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[0]     ; KEY[0]   ; 0        ; 0        ; 0        ; 643      ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[0]     ; KEY[0]   ; 0        ; 0        ; 0        ; 643      ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 8     ; 8    ;
+; Unconstrained Input Port Paths  ; 79    ; 79   ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 10    ; 10   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Nov 23 13:36:57 2018
+Info: Command: quartus_sta MaquinaEstados -c MaquinaEstados
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'MaquinaEstados.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name KEY[0] KEY[0]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -4.724
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -4.724       -45.720 KEY[0] 
+Info (332146): Worst-case hold slack is 2.144
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     2.144         0.000 KEY[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -12.222 KEY[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.633
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.633       -15.075 KEY[0] 
+Info (332146): Worst-case hold slack is 0.967
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.967         0.000 KEY[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -12.222 KEY[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 478 megabytes
+    Info: Processing ended: Fri Nov 23 13:36:59 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
